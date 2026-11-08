@@ -18,6 +18,7 @@ logging.basicConfig(
     format="%(asctime)s | %(levelname)-7s | %(name)s | %(message)s",
     stream=sys.stdout,
 )
+logging.getLogger("azure").setLevel(logging.WARNING)
 log = logging.getLogger("pipeline")
 
 
