@@ -1,0 +1,20 @@
+{
+  "periodo": "202610",
+  "aplicar_tope_comision": false,
+  "fuente_comisiones": {
+    "tipo": "blob",
+    "contenedor": "raw",
+    "carpeta": "comisiones",
+    "carpeta_local": "data/input",
+    "archivo": "ComisionEmpleados_V1_{periodo}.csv"
+  },
+  "salida": {
+    "tipo": "adls",
+    "contenedor": "curated",
+    "carpeta": "rrhh/salario_total_empleados"
+  },
+  "calidad": {
+    "min_filas_salida": 1,
+    "min_ratio_cruce": 0.95
+  }
+}
