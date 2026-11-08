@@ -1,0 +1,19 @@
+# Plan B sin suscripción de Azure: Azurite, el emulador oficial de Azure Blob Storage.
+# Crea dos "storage accounts" separadas, una por entorno: dopsqa y dopsprd.
+#   cd local-azure && docker compose up -d
+# Las claves son las del emulador local (no son secretos reales).
+services:
+  azurite:
+    image: mcr.microsoft.com/azure-storage/azurite:3.33.0
+    container_name: azurite-dops
+    command: azurite-blob --blobHost 0.0.0.0 --blobPort 10000 --location /data --loose --skipApiVersionCheck
+    environment:
+      AZURITE_ACCOUNTS: "dopsqa:Q9s/FGrPEIqPCMcgfOXg4XzhJN8M6jAC41OvmvADqBA=;dopsprd:Pn/BNZ1XIVzxwxUEZrcR1EvptQERfWawUKz6B1baQy0="
+    ports:
+      - "10000:10000"
+    volumes:
+      - azurite_data:/data
+    restart: unless-stopped
+
+volumes:
+  azurite_data:
