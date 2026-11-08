@@ -1,0 +1,11 @@
+# Secretos: nunca se versionan
+.env
+*.publishsettings
+# Salidas del pipeline (se archivan como artefacto en Jenkins)
+output/
+reports/
+# Python
+__pycache__/
+*.pyc
+.pytest_cache/
+.venv/
