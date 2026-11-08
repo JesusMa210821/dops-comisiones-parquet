@@ -45,10 +45,10 @@ def cargar_config(entorno: str) -> Config:
         calidad=datos["calidad"],
         aplicar_tope_comision=datos.get("aplicar_tope_comision", False),
         postgres={
-            "host": os.getenv("PG_HOST", ""),
+            "host": os.getenv("PG_HOST", "").strip(),
             "port": int(os.getenv("PG_PORT", "5432")),
             "dbname": os.getenv("PG_DB", "dmc"),
-            "user": os.getenv("PG_USER", ""),
+            "user": os.getenv("PG_USER", "").strip(),
             "password": os.getenv("PG_PASSWORD", ""),
         },
         azure_conn_str=os.getenv("AZURE_STORAGE_CONNECTION_STRING", ""),
