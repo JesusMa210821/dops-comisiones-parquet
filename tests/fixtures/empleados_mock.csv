@@ -1,0 +1,38 @@
+empleado_id;tip_documento;num_documento;nom_empleado;ape_empleado;cod_cargo;des_cargo;cod_departamento;des_departamento;mnt_salario;mnt_tope_comision
+1;DNI;40000000;Juan;Pérez;C02;Ejecutivo comercial;D01;Ventas;6500;12000
+2;DNI;40000137;María;Gómez;C01;Analista;D01;Ventas;8000;10000
+3;DNI;40000274;Carlos;Martínez;C02;Ejecutivo comercial;D01;Ventas;8000;10000
+4;DNI;40000411;Ana;López;C01;Analista;D01;Ventas;6500;11000
+5;DNI;40000548;Pedro;Ramírez;C01;Analista;D01;Ventas;3500;12000
+6;DNI;40000685;Lucía;Torres;C02;Ejecutivo comercial;D01;Ventas;8000;10000
+7;DNI;40000822;Jorge;Vega;C01;Analista;D01;Ventas;8000;12000
+8;DNI;40000959;Rosa;Salas;C02;Ejecutivo comercial;D01;Ventas;4200;10000
+9;DNI;40001096;Miguel;Martínez;C03;Jefe de ventas;D01;Ventas;5000;11000
+10;DNI;40001233;Isabella;López;C01;Analista;D01;Ventas;8000;11000
+11;DNI;40001370;Daniel;Gómez;C03;Jefe de ventas;D01;Ventas;3500;12000
+12;DNI;40001507;Camila;Hernández;C03;Jefe de ventas;D01;Ventas;5000;10000
+13;DNI;40001644;Samuel;Torres;C03;Jefe de ventas;D01;Ventas;8000;10000
+14;DNI;40001781;Valeria;Rodríguez;C03;Jefe de ventas;D01;Ventas;6500;12000
+15;DNI;40001918;Benjamín;Pérez;C03;Jefe de ventas;D02;Operaciones;5000;11000
+16;DNI;40002055;Luciana;García;C03;Jefe de ventas;D02;Operaciones;5000;11000
+17;DNI;40002192;Martín;Díaz;C01;Analista;D01;Ventas;4200;10000
+18;DNI;40002329;Juliana;Martínez;C03;Jefe de ventas;D02;Operaciones;8000;11000
+19;DNI;40002466;Diego;Herrera;C02;Ejecutivo comercial;D02;Operaciones;5000;12000
+20;DNI;40002603;Emilia;Sánchez;C01;Analista;D01;Ventas;8000;11000
+21;DNI;40002740;Sebastián;Fernández;C01;Analista;D02;Operaciones;4200;11000
+22;DNI;40002877;Isaac;Luna;C02;Ejecutivo comercial;D01;Ventas;3500;12000
+23;DNI;40003014;Amanda;Gutierrez;C03;Jefe de ventas;D02;Operaciones;5000;12000
+24;DNI;40003151;Oliver;Jiménez;C02;Ejecutivo comercial;D02;Operaciones;8000;11000
+25;DNI;40003288;Paula;Romero;C01;Analista;D01;Ventas;5000;11000
+26;DNI;40003425;Joaquín;Núñez;C03;Jefe de ventas;D01;Ventas;3500;12000
+27;DNI;40003562;Bianca;Silva;C03;Jefe de ventas;D02;Operaciones;8000;12000
+28;DNI;40003699;Thiago;Hernández;C02;Ejecutivo comercial;D02;Operaciones;6500;12000
+29;DNI;40003836;Ana Clara;Rojas;C02;Ejecutivo comercial;D01;Ventas;6500;11000
+30;DNI;40003973;Eduardo;Vargas;C01;Analista;D01;Ventas;6500;10000
+31;DNI;40004110;Renata;Martínez;C01;Analista;D02;Operaciones;4200;12000
+32;DNI;40004247;Leonardo;López;C01;Analista;D02;Operaciones;6500;11000
+33;DNI;40004384;Laura;Herrera;C01;Analista;D01;Ventas;6500;11000
+34;DNI;40004521;Iker;García;C03;Jefe de ventas;D02;Operaciones;4200;11000
+35;DNI;40004658;Mariana;Díaz;C03;Jefe de ventas;D02;Operaciones;6500;11000
+36;DNI;40004795;Max;Romero;C03;Jefe de ventas;D02;Operaciones;4200;10000
+37;DNI;40004932;Aitana;Pérez;C01;Analista;D01;Ventas;4200;10000
