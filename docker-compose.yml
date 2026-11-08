@@ -1,0 +1,10 @@
+# Ejecución local:  ENTORNO=dev docker compose up --build
+# Modo sin red:     docker compose run --rm pipeline --env dev --offline
+services:
+  pipeline:
+    build: .
+    image: dops-comisiones:local
+    env_file: .env
+    command: ["--env", "${ENTORNO:-dev}"]
+    volumes:
+      - ./output:/app/output
