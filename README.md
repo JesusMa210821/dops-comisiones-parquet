@@ -52,12 +52,13 @@ app/
 config/            dev.json · qa.json · prd.json (sin secretos)
 data/input/        ComisionEmpleados_V1_202610.csv
 infra/arm/         azuredeploy.json + parámetros por entorno (ADLS Gen2, contenedores raw/curated)
-scripts/           deploy_arm.sh · upload_comisiones.sh · quality_gate.py
+scripts/           deploy_arm.sh · upload_comisiones.sh · quality_gate.py · azurite_setup.py · azurite_listar.py
 tests/             Pruebas unitarias, de integración offline y de validación ARM (19 tests)
 Dockerfile         Imagen del pipeline
 docker-compose.yml Ejecución local
 Jenkinsfile        Pipeline CI/CD declarativo
 jenkins-local/     Jenkins en Docker para ejecutar el CI/CD en tu PC
+local-azure/       Azurite (emulador de Blob Storage) si no hay suscripción de Azure
 ```
 
 ## Reglas de negocio y calidad
@@ -108,6 +109,18 @@ az login
 ./scripts/upload_comisiones.sh <storage_prd> 202610
 ```
 Copia la *connection string* de cada storage (Portal → Storage account → Access keys).
+
+### 3-B. Sin suscripción de Azure: Data Lake emulado (Azurite)
+Si tu cuenta no tiene suscripción activa, QA y PRD pueden usar **Azurite**, el emulador oficial
+de Azure Blob Storage. El código no cambia: solo la cadena de conexión.
+```bash
+cd local-azure && docker compose up -d && cd ..
+python scripts/azurite_setup.py      # crea raw/curated en dopsqa y dopsprd, sube el CSV e imprime las credenciales
+python scripts/azurite_listar.py     # evidencia: contenido de raw y curated por entorno
+```
+En Jenkins usa como `azure-storage-qa` / `azure-storage-prd` las cadenas con `host.docker.internal`
+que imprime `azurite_setup.py`. Las plantillas ARM siguen versionadas y se validan en el CI; se
+despliegan con el paso 3 cuando haya una suscripción disponible.
 
 ### 4. Configurar Jenkins
 Si no tienes un Jenkins en una VM, levántalo en tu PC con Docker Desktop:
